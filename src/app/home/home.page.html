@@ -1,0 +1,69 @@
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>
+                    RE-MO - Restaurante Movil
+                </ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content color="warning">
+            <form onsubmit="processForm(event)">
+                <ion-card class="welcome-card">
+                    <img src="/assets/login.jpg" alt="" />
+                    <ion-card-header>
+                        <!--<ion-card-subtitle>Get Started</ion-card-subtitle>
+            <ion-card-title>Welcome to Ionic</ion-card-title>-->
+                    </ion-card-header>
+                    <!--<ion-card-content>
+            <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        </ion-card-content>-->
+                </ion-card>
+
+                <div class="columna">
+                    <img src="/assets/lock.svg" alt="" />
+                </div>
+                <div class="columna">
+                    <ion-item>
+                        <ion-input placeholder="Usuario" required type="text" oninput="handleLoginValue(event)"></ion-input>
+                    </ion-item>
+                    <br>
+                    <ion-item>
+
+                        <ion-input placeholder="Password" required type="password" oninput="handlePasswordValue(event)"></ion-input>
+                    </ion-item>
+                    <div class="ion-padding">
+                        <ion-button expand="block" type="submit" class="ion-no-margin">LOGIN</ion-button>
+                    </div>
+                </div>
+            </form>
+            <div class="columna">
+                <img src="/assets/1.svg" alt="" />
+            </div>
+        </ion-content>
+    </ion-app>
+    <script>
+        const controller = document.querySelector('ion-alert-controller');
+        let usr, pass;
+
+        function processForm(event) {
+            event.preventDefault();
+            controller.create({
+                header: 'Account Created',
+                message: `Created account for: <b>${usr} ${pass}</b>`,
+                buttons: [{
+                    text: 'OK'
+                }]
+            }).then(alert => alert.present());
+        }
+
+        function handleLoginValue(event) {
+            usr = event.target.value;
+        }
+
+        function handlePasswordValue(event) {
+            pass = event.target.value;
+        }
+    </script>
+</body>
