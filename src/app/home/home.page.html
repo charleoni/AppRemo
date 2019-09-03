@@ -1,4 +1,4 @@
-<body>
+<body class="color">
     <ion-app>
         <ion-header>
             <ion-toolbar>
@@ -8,7 +8,7 @@
             </ion-toolbar>
         </ion-header>
 
-        <ion-content color="warning">
+        <ion-content color="#FFB300">
             <form onsubmit="processForm(event)">
                 <ion-card class="welcome-card">
                     <img src="/assets/login.jpg" alt="" />
@@ -34,7 +34,7 @@
                         <ion-input placeholder="Password" required type="password" oninput="handlePasswordValue(event)"></ion-input>
                     </ion-item>
                     <div class="ion-padding">
-                        <ion-button expand="block" type="submit" class="ion-no-margin">LOGIN</ion-button>
+                        <ion-button [routerLink]="['/menu']">LOGIN</ion-button>
                     </div>
                 </div>
             </form>
