@@ -1,0 +1,32 @@
+<body>
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>variables</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <div class="cabeza">
+            <H3>{{nombre}}</H3>
+            <H3>{{ejercicio}}</H3>
+        </div>
+        <br>
+
+        <ul *ngFor='let miembros of members'>
+            <span *ngIf='miembros.age>30'>  
+                  <div class="cuerpo"> 
+              <li type="none">
+                  <H1>Nombre: {{miembros.name}}</H1>
+              </li>
+              <li type="none">
+                  <H1>Edad: {{miembros.age}}</H1>
+              </li>
+              <li type="none">
+                  <H1>Power: {{miembros.powers}}</H1>
+              </li>                   
+            </div>         
+            </span>
+        </ul>
+
+    </ion-content>
+</body>
