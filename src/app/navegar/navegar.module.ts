@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { NavegarPage } from './navegar.page';
+import { ModalPagePage } from '../modal-page/modal-page.page';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [NavegarPage]
+  declarations: [NavegarPage, ModalPagePage],
+  entryComponents: [ModalPagePage]
 })
 export class NavegarPageModule {}
