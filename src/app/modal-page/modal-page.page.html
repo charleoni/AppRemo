@@ -6,15 +6,16 @@
 
 <ion-content padding>
     <ion-button (click)="dismiss()">Atrás</ion-button>
-    <br> {{val}}
     <ion-card *ngFor='let sitio of sitios'>
-        <img src="{{sitio.nameSite}}" />
-        <ion-card-header>
-            <ion-card-subtitle>Destino Turístico</ion-card-subtitle>
-            <ion-card-title>{{sitio.lugar}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{sitio.description}}
-        </ion-card-content>
+        <span *ngIf="sitio.tipo===val">
+            <img src="{{sitio.nameSite}}" />
+            <ion-card-header>
+                <ion-card-subtitle>{{val}}</ion-card-subtitle>
+                <ion-card-title>{{sitio.lugar}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                {{sitio.description}}
+            </ion-card-content>
+        </span>
     </ion-card>
 </ion-content>
